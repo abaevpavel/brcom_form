@@ -1,17 +1,19 @@
 const axios = require('axios');
 
+const AIRTABLE_TOKEN = process.env.REACT_APP_AIRTABLE_TOKEN || '';
+
 const fetchInfo = async (configId, recordId, callback) => {
     const configPromise = axios.get(`https://api.airtable.com/v0/appAXGQKbdIebg7mV/Todos%20Config/${configId}`,
         {
             headers: {
-                "Authorization": `Bearer patUICwnkk9q8SnFv.da5a8cd0d87db095995b1c1b3a14458bf37af437b713777457c78ea771dfd11b`
+                "Authorization": `Bearer ${AIRTABLE_TOKEN}`
             }
         }
     )
     const recordInfoPromise = axios.get(`https://api.airtable.com/v0/appAXGQKbdIebg7mV/Todos/${recordId}`,
         {
             headers: {
-                "Authorization": `Bearer patUICwnkk9q8SnFv.da5a8cd0d87db095995b1c1b3a14458bf37af437b713777457c78ea771dfd11b`
+                "Authorization": `Bearer ${AIRTABLE_TOKEN}`
             }
         }
     )

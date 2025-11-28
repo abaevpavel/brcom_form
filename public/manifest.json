@@ -1,0 +1,11 @@
+{
+  "short_name": "BR Com Todos Form",
+  "name": "BR Com Todos Form",
+  "icons": [
+
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

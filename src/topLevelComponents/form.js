@@ -26,6 +26,9 @@ function Form(props) {
         axios.post(INTEGROMAT_URL, dataWillBeSubmitted)
             .then((res) => {
                 props.showThankYou(true);
+                setTimeout(() => {
+                    window.close();
+                }, 500);
             })
             .catch((err) => alert("Unexpected error occured. Please try again."))
     }

@@ -1,3 +1,8 @@
+# Netlify configuration
+# Fixed compatibility issue: react-scripts 4.0.3 requires Node.js 16
+# Netlify default Node.js version (v22+) is incompatible with old webpack used in react-scripts 4.x
+# Solution: explicitly specify Node.js 16 which is compatible with this project
+
 [build]
   command = "npm run build"
   publish = "build"

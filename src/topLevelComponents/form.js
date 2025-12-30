@@ -28,7 +28,7 @@ function Form(props) {
                 props.showThankYou(true);
                 setTimeout(() => {
                     window.close();
-                }, 500);
+                }, 1000);
             })
             .catch((err) => alert("Unexpected error occured. Please try again."))
     }
